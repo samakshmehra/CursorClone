@@ -1,52 +1,63 @@
-# Cursor Clone 🚀
+# Cursor Clone
 
-An AI-powered code generation tool that mimics Cursor's functionality using LangGraph and Google's Gemini AI. This project creates intelligent agents that can plan, architect, and implement code solutions based on natural language prompts.
+A simple AI tool that helps generate code based on your prompts. It uses LangGraph and Google's Gemini to plan, design, and build code automatically.
 
-## 🌟 Features
+## What it does
 
-- **Intelligent Planning**: Uses AI to break down complex tasks into manageable steps
-- **Architecture Design**: Automatically creates implementation plans with file structures
-- **Code Generation**: Implements solutions step-by-step using AI agents
-- **File Management**: Safe file operations with project root isolation
-- **Multi-Agent Workflow**: Coordinated agents for planning, architecture, and coding
-- **Visualization**: Jupyter notebook for graph workflow visualization
+- Takes your description of what you want to build
+- Plans out the steps needed
+- Creates the code files for you
+- Uses AI agents to handle different parts of the work
 
-## 🏗️ Architecture
+## Quick Start
 
-The project uses a multi-agent LangGraph workflow:
-
-```
-User Prompt → Planner Agent → Architect Agent → Coder Agent → Implementation
-```
-
-### Agent Roles
-
-1. **Planner Agent**: Analyzes user requirements and creates high-level plans
-2. **Architect Agent**: Breaks down plans into specific implementation tasks
-3. **Coder Agent**: Executes implementation tasks using file operations
-
-## 📋 Prerequisites
-
-- Python 3.13+
-- Google AI API key (Gemini)
-- Optional: Groq API key for alternative LLM
-
-## 🚀 Installation
-
-1. **Clone the repository**
+1. Clone this repo:
    ```bash
    git clone https://github.com/samakshmehra/CursorClone.git
    cd CursorClone
    ```
 
-2. **Install dependencies**
+2. Install stuff:
    ```bash
    pip install -e .
    ```
-   or using uv:
-   ```bash
-   uv sync
+
+3. Set up your API key in a .env file:
    ```
+   GOOGLE_API_KEY=your_key_here
+   ```
+
+4. Run it:
+   ```bash
+   python graph.py
+   ```
+
+## How it works
+
+The tool has three main parts:
+- Planner: Figures out what needs to be done
+- Architect: Plans the files and structure
+- Coder: Actually writes the code
+
+It uses a graph to manage the workflow, so everything happens in the right order.
+
+## Requirements
+
+- Python 3.13 or newer
+- A Google AI API key
+- That's it!
+
+## Files
+
+- `graph.py` - Main script
+- `schema.py` - Data models
+- `prompt.py` - AI prompts
+- `tools.py` - Helper functions
+- `graph_visualization.ipynb` - Notebook to see the workflow graph
+
+## Notes
+
+This is a basic version. It might not handle everything perfectly, but it's a good starting point for AI-assisted coding.
 
 3. **Set up environment variables**
    ```bash
